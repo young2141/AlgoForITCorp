@@ -1,14 +1,15 @@
 size = int(input())
 
-a=[0]*1001
+def fibo(n):
+    if a[n]!=-1:
+        return a[n]
+    a[1]=1
+    a[2]=2
+    for i in range(3,size+1):
+        a[i]=a[i-1]+a[i-2]
+    return a[n]
 
-a[1]=1
-a[2]=2
-
-for i in range(3,size+1):
-    a[i]=a[i-1]+a[i-2]
-
-
-print(a[size]%10007)
+a=[-1]*1001
+print(fibo(size)%10007)
 
 #Thanksful to TY
