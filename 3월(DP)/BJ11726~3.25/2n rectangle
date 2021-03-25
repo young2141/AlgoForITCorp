@@ -1,10 +1,14 @@
-size1=input()
-size2=int(size1)
-a=[0]*size2
-a.count(0)
-a[0]=1
-a[1]=2
-for i in range(2,size2):
+size = int(input())
+
+a=[0]*1001
+
+a[1]=1
+a[2]=2
+
+for i in range(3,size+1):
     a[i]=a[i-1]+a[i-2]
 
-a[size2-1]%10007
+
+print(a[size]%10007)
+
+#Thanksful to TY
